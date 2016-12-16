@@ -236,7 +236,7 @@ Be careful with the direction you choose! "
             (do (if (contains? (player :inventory) :raw-egg)
                   (do (if (> (player :grue-love) 0)
                         (do (println "Grue loves you, go for its spirit. ")player)
-                        (do (print (player :grue-love))player))
+                        (do (print (str "Grue starts to love you. " ))player))
                       (println "Grue loves you more.")
                       (update-in player [:grue-love] inc ))
                   (do (println "Seriously? Are you going to feed grue with yourself?") player)))))
