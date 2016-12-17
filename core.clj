@@ -13,11 +13,11 @@ You get the feeling it was just created for a game or something."
    :grue-pen {:desc "It is very dark.  You are about to be eaten by a grue. Are you going to fight? "
               :title "in the grue pen"
               :hint "Don't you know that grue loves raw eggs?"
-              :dir {:north :foyer :downstairs :basement :south :truth-room}
+              :dir {:north :foyer :downstairs :basement :south :truth-room :west :gallery :east :lab}
               };alter it so that grue doesn't eat you
    :basement { :title "in the basement"
-               :desc "Something is glowing in the dark."
-               :hint "Seems like there is something on the ground."
+               :desc "There is no lightening here and you see something is glowing in the dark."
+               :hint "Part of grue lives here."
                :dir {:upstairs :grue-pen}
                :contents #{:spirit3 }}
    :DNE {:desc "Full of NULL pointers and Segment Faults!!! "
@@ -26,44 +26,44 @@ You get the feeling it was just created for a game or something."
          :dir {:south :gallery :east :foyer}}
    :kitchen {:title "in kitchen"
              :desc "It is a clean and tidy full kitchen, you may have a decent meal here!"
-             :hint "You are hungry. And this is kitchen."
+             :hint "You are hungry. And this is kitchen!"
              :dir {:south :lab :west :foyer}
-             :contents #{:cooked-egg }}
+             :contents #{}}
    :gallery {:title "in gallery"
-             :hint "You can pick something up."
-             :desc "A piece of grue lives here."
-             :dir {:north :DNE}
+             :hint "There is a piece of gure's soul."
+             :desc "The great paint on the wall is a ... Grue?"
+             :dir {:north :DNE :east :grue-pen}
              :contents #{:spirit1 }}
    :lab {:title "in lab"
-         :hint "Seems like there is something on the ground."
-         :dir {:north :kitchen}
-         :desc "You can create somthing here."
+         :hint "You can mix something here."
+         :dir {:north :kitchen :west :grue-pen}
+         :desc "It is a full-equipped chemistry lab. People make things here."
          :contents #{:beaker}}
    :truth-room {:title "in truth-room"
-                :hint "Seems like there is something on the ground."
+                :hint "You can ask for truth"
                 :dir {:north :grue-pen}
-                :desc "You can ask for truth."
+                :desc "The room is empty, no furniture or any decoration."
                 }
 
    :bedroom {:title "in bedroom"
-            :hint "There is a piece of grue under the bed."
-            :dir {:west :study-room :east :bar :south :balcony}
-            :desc "Do not sleep on the bed."
+            :hint "Do not sleep on the bed. There is a piece of grue."
+            :dir {:west :study-room :east :bar :south :balcony :north :mirror-room}
+            :desc "It is a mess here, clothes are all around."
             :contents #{:spirit2 }}
    :ball-room {:title "in ball-room"
-               :hint "Seems like there is something on the ground."
-               :desc "Shut up and listen to the whisper."
+               :desc "There is a single ballet shoe."
+               :hint "Shut up and listen to the whisper."
                :dir {:south :study-room :east :mirror-room}
                :contents #{:spell1 }}
    :bath-room {:title "in bath-room"
-               :hint "Seems like there is something on the ground."
+               :desc "People love to sing when taking shower."
                :dir {:west :mirror-room :south :bar}
-               :desc "Shut up and listen to the whisper."
+               :hint "Do you hear the people sing?"
                :contents #{:spell2 }}
    :study-room {:title "in study-room"
-                :hint "Seems like there is something on the ground."
+                :desc "Oh there's a stack of homework, a grader lives here."
                 :dir {:north :ball-room :east :bedroom}
-                :desc "Shut up and listen to the whisper."
+                :hint "Listen!"
                 :contents #{:spell3 }}
    :bar {:title "in bar"
          :hint "Seems like there is something on the ground."
@@ -73,14 +73,14 @@ You get the feeling it was just created for a game or something."
    :mirror-room {:desc "It is a room full of mirrors.
 Be careful with the direction you choose! "
                  :title "in mirror-room"
-                 :hint "Opposite directions and useless thing on the ground."
-                 :dir {:west :bath-room :east :ball-room :downstairs :foyer}
+                 :hint "The direction is flipped. Go left if you want to go right!"
+                 :dir {:west :bath-room :east :ball-room :north :bedroom :downstairs :foyer}
                  :contents #{:broken-mirrors}} ;dir flipped
    :balcony {:title "in the balcony"
              :desc "It is very large."
              :hint "As the game developper, I'm telling you that this is the exit! "
              :dir {:north :bedroom}
-             :contents #{:Patronus }}
+             :contents #{}}
    })
 
 (def adventurer
