@@ -182,7 +182,7 @@ Be careful with the direction you choose! "
       (println "     check -- see what you have")
       (println "     north, south, east, west, upstairs, downstairs -- move around")
       (println "     pickup -- receive objects")
-      (println "     hint, quit, help -- game options")
+      (println "     hint, quit, help, time -- game options")
       (if (< (player :grue-love) 1)
         (do (println "(All hidden actions are not shown. )")
             (println "The more grue loves you, the more tips you will get."))
