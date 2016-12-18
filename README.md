@@ -27,8 +27,8 @@ Room:
   
   
 Commands:
-    19 commands in total
-    7 are hidden (Increase grue-love to see)
+    20 commands in total
+    7 are hidden from player (Increase "grue-love" to see)
     
     
 Status:
@@ -42,3 +42,5 @@ Status:
         some contents can only be picked up once
         some (cooked-eggs) are triggered by other actions
     b. description of room depends on player's status
+  3. obj
+    a. after creating grue's soul of 3 spritis, spirits will be removed from inventory 
